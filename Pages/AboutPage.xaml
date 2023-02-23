@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
              x:Class="BookStore.Pages.AboutPage"
              Title="AboutPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to about page"
-            FontSize="Large"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+                <skia:SKLottieView
+                Source="ui.json"
+                RepeatCount="-1"
+                RepeatMode="Reverse"
+                SemanticProperties.Description="Animatiom for the ui construction"
+                HeightRequest="200"
+                WidthRequest="200"
+                HorizontalOptions="Center" />
+
+                <Label
+                Text="BookStore v.1.0.0.0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+                <Label
+                Text="Welcome to the BookStore app where you can track your reading progress"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to my application"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+                <Button
+                x:Name="CounterBtn"
+                Text="Github"
+                SemanticProperties.Hint="view project on github"
+                HorizontalOptions="Center" />
+
+            </VerticalStackLayout>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>

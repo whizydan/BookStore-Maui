@@ -5,9 +5,22 @@
              Title="SettingsPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to settings page"
+            Text="Choose the theme that's right for you"
             FontSize="Large"
             VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Button
+            x:Name="light"
+            Text="Light theme"
+            SemanticProperties.Hint="Change theme to light mode"
+            Clicked="light_Clicked"
+            HorizontalOptions="Center" />
+        <Button
+            x:Name="Dark"
+            Text="Dark theme"
+            SemanticProperties.Hint="Change theme to dark mode"
+            Clicked="EnterLight"
             HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>
