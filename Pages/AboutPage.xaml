@@ -27,7 +27,7 @@
                 HorizontalOptions="Center" />
 
                 <Label
-                Text="Welcome to the BookStore app where you can track your reading progress"
+                Text="Welcome to the BookStore app where you can save a note for later, more features are on the way!"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to my application"
                 FontSize="18"
