@@ -37,6 +37,7 @@
                 x:Name="CounterBtn"
                 Text="Github"
                 SemanticProperties.Hint="view project on github"
+                Clicked="CounterBtn_Clicked"
                 HorizontalOptions="Center" />
 
             </VerticalStackLayout>
