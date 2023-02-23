@@ -52,7 +52,11 @@
 	  <None Remove="Resources\Images\dark_mode.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\info.svg" />
+	  <None Remove="Resources\Images\intro.svg" />
+	  <None Remove="Resources\Images\intro1.png" />
 	  <None Remove="Resources\Images\logo.ico" />
+	  <None Remove="Resources\Images\run.png" />
+	  <None Remove="Resources\Images\school.png" />
 	  <None Remove="Resources\Raw\ui.json" />
 	</ItemGroup>
 
@@ -65,6 +69,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\IntroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\SettingsPage.xaml">

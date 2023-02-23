@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels ="clr-namespace:BookStore.ViewModel"
+             xmlns:models="clr-namespace:BookStore.Models"
+             x:Class="BookStore.Pages.IntroPage"
+             Shell.NavBarIsVisible="False"
+             x:DataType="viewModels:IntroScreenViewModel"
+             Title="IntroPage">
+    
+    <StackLayout Margin="10">
+        <CarouselView IndicatorView="indicatorView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding IntroScreens}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="models:IntroScreenModel">
+                    <Grid RowDefinitions="60*,40*">
+                        <Image Source="{Binding IntroScreenImage}" Aspect="AspectFit" Grid.Row="0"/>
+
+                        <VerticalStackLayout Grid.Row="1">
+                            <Label Text="{Binding IntroScreenTitle}" FontSize="28" FontAttributes="Bold"/>
+                            <Label Text="{Binding IntroScreenDescription}" FontSize="20" TextColor="Gray"/>
+                            
+                        </VerticalStackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <StackLayout Orientation="Horizontal">
+            <IndicatorView x:Name="indicatorView" IndicatorSize="10" IndicatorColor="LightGoldenrodYellow" SelectedIndicatorColor="{x:StaticResource Primary}"/>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

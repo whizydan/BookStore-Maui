@@ -16,10 +16,13 @@
         <Shell>
             <TabBar x:Name="BooksTab">
                 <Tab Title="Home" Icon="home.svg">
-                    <ShellContent ContentTemplate="{DataTemplate local:Pages.HomePage}"/>
+                    <ShellContent ContentTemplate="{DataTemplate local:Pages.ViewPage}"/>
                 </Tab>
                 <Tab Title="Settings" Icon="dark_mode.svg">
                     <ShellContent ContentTemplate="{DataTemplate local:Pages.SettingsPage}"/>
+                </Tab>
+                <Tab Title="Intro" Icon="intro.svg">
+                    <ShellContent ContentTemplate="{DataTemplate local:Pages.IntroPage}"/>
                 </Tab>
                 <Tab Title="About" Icon="info.svg">
                     <ShellContent ContentTemplate="{DataTemplate local:Pages.AboutPage}"/>
